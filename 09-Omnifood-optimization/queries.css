@@ -1,0 +1,375 @@
+/* rem and em do not depend on html font-size in media queries!
+instead, 1rem = 1em =16px */
+/* *********************** */
+/* Below 1344px (small desktop)*/
+/* ************************  */
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+  .Primary-Header {
+    font-size: 4.4rem;
+  }
+  .gallery-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+/* *******************************
+  Below1200px (Landscape tablets)
+******************************* */
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+  .heading-tertiary {
+    font-size: 2.4rem;
+  }
+  .grid {
+    row-gap: 6.4rem;
+    column-gap: 4.8rem;
+  }
+  .section-testimonal.container.grid.grid--2--col {
+    grid-template-columns: 55fr 35fr;
+  }
+  .gallery-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .main-nav-list {
+    gap: 1.8rem;
+  }
+  .hero {
+    gap: 4.8rem;
+  }
+}
+/* *******************************
+  Below 944px (tablets)
+******************************* */
+@media (max-width: 59em) {
+  html {
+    /* 8px/16=0.5=50% */
+    font-size: 50%;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 0 8rem;
+  }
+  .hero-img {
+    width: 60%;
+  }
+  .hero-img-box,
+  .hero-text-box {
+    text-align: center;
+  }
+  .delivered-meals {
+    justify-content: center;
+    margin-top: 3.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .hero-text-box {
+    padding-bottom: 1.4rem;
+  }
+  .hero-img-box {
+    margin-top: 1.6rem;
+  }
+  .hero-img {
+    margin-top: 1.2rem;
+  }
+  .grid {
+    gap: 1rem;
+  }
+  .section-testimonal.container.grid.grid--2--col {
+    grid-template-columns: 50fr 50fr;
+  }
+  .gallery-items {
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 7.2rem;
+    margin-bottom: 6rem;
+  }
+  .logos img {
+    height: 2.4rem;
+  }
+
+  .testimonials {
+    margin-top: 6rem;
+    row-gap: 8.4rem;
+    margin-bottom: 3.2rem;
+  }
+  .heading-secondary {
+    margin-top: 1.8rem;
+    margin-bottom: 3.2rem;
+    padding-left: 1.6rem;
+  }
+  .step-number {
+    font-size: 6.2rem;
+  }
+  .meal-content {
+    padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+  }
+  .section-testimonal.container.grid.grid--2--col {
+    grid-template-columns: 1fr;
+    margin-left: 4.8rem;
+  }
+  .testimonials {
+    padding-left: 1.6rem;
+  }
+  .gallery-items {
+    grid-template-columns: repeat(6, 1fr);
+    padding-left: 1.6rem;
+  }
+  .sub-heading {
+    padding-left: 1.6rem;
+  }
+  .section-pricing {
+    margin-left: 4.8rem;
+  }
+  .section-pricing .heading-secondary {
+    text-align: center;
+  }
+  .section-pricing .sub-heading {
+    padding-left: 2.2rem;
+  }
+  .section-pricing .container.grid.grid--2--col {
+    column-gap: 3.2rem;
+  }
+  .section-pricing {
+    margin-left: 6.5rem;
+  }
+  .section-cta {
+    margin-left: 6.5rem;
+  }
+  .cta {
+    height: 45rem;
+    grid-template-columns: 63fr 37fr;
+  }
+  .cta-text .heading-secondary {
+    margin-bottom: 1.6rem;
+  }
+  .footer {
+    padding-top: 6.4rem;
+    margin-left: 6.5rem;
+  }
+  .social-links {
+    margin-bottom: 3.2rem;
+  }
+
+  .grid--footer {
+    grid-template-columns: 1.35fr 1.35fr 1.1fr 1.1fr 1.1fr;
+  }
+  .footer-heading {
+    font-weight: 500;
+    margin-bottom: 1.8rem;
+  }
+  .coppyright {
+    margin-top: auto;
+  }
+  /* MOBILE NAVIGATION */
+  .btn-mobile-nav {
+    display: block;
+    z-index: 9999;
+  }
+  .main-nav {
+    background-color:rgba(255, 255, 255, 0.941);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+    /* 1) hide it visually */
+    opacity: 0;
+    /* 2) make it unaccesible mouth and key board */
+    pointer-events: none;
+    /*  3) hide it from screen  reader*/
+    visibility: hidden;
+  }
+  .main-nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+  .nav-open .main-nav {
+    opacity: 2;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+  .nav-open .icon-mobile-nav[name="close-outline"]{
+    display: block;
+    
+  }
+  .nav-open .icon-mobile-nav[name="menu-outline"]{
+    display: none;
+  }
+  .main-nav-link:link,
+  .main-nav-link:visited {
+    font-size: 3rem;
+    font-weight: 800;
+}
+/* *******************************
+  Below 944px (tablets)
+******************************* */
+@media(max-width: 44em){
+  .grid.grid--4--col,
+  .grid--3-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lists{
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+  .heading-secondary{
+    margin-bottom: 4.8rem;
+  }
+  .section-pricing .pricing-plan{
+    width: 100%;
+   
+    }
+    .grid-footer{
+      grid-template-columns: repeat(6,1rf);
+    }
+    .logo-col,
+    .address-col{
+      grid-column: span 3;
+    }
+    .nav-col{
+      grid-row: 1;
+      grid-column: span 2;
+      margin-bottom: 3.2rem;
+    }
+    .features-div.lastf{
+      grid-column: 1/-1;
+      justify-self: center;
+    }
+   
+}
+
+      /* *******************************
+      Below 544px (phones)
+      ******************************* */
+      @media(max-width: 34em){
+        .grid{
+          row-gap: 4.8rem;
+        }
+        .grid--2--col,
+        .grid.grid--4--col,
+        .grid--3-cols {
+          grid-template-columns: 1fr;
+        }
+        .section-hero{
+          padding: 2.4rem 0 6.4rem 0;
+        }
+        .btn,
+        .btn:link,
+        .btn:visited{
+          padding: 1.8rem 1.6rem;
+        }
+        .hero-img{
+          width: 80%;
+        }
+        .logos img{
+          height: 1.2rem;
+        }
+        .step-img-box:nth-child(2){
+          grid-row: 1;
+        }
+        /* .step-img-box:nth-child(2){
+          grid-row: 1;
+        } */
+        .step-img-box{
+          transform: translateY(2.4rem);
+        }
+        .testimonials{
+          grid-template-columns: 1fr;
+        }
+        .gallery-items {
+          grid-template-columns: repeat(4, 1fr);
+          padding-left: 1.6rem;
+        }
+        .cta{
+          grid-template-columns: 1fr;
+          height: 110rem;
+        }
+        .cta-img{
+          height:42rem;
+          grid-row: 1;
+        }
+        .cta-form{
+          grid-template-columns: 1fr;
+        }
+        .cta-text{
+          padding: 3.2rem;
+        }
+        .section-cta{
+          margin: 1.4rem;
+        }
+
+      }
+      /* *******************************
+         Fixing Flex gap on safari
+      ******************************* */
+      .no-flexbox-gap .main-nav-list li:not(:last-child) {
+        margin-right: 4.8rem;
+      }
+      
+      .no-flexbox-gap .list-item:not(:last-child) {
+        margin-bottom: 1.6rem;
+      }
+      
+      .no-flexbox-gap .list-icon:not(:last-child) {
+        margin-right: 1.6rem;
+      }
+      
+      .no-flexbox-gap .delivered-faces {
+        margin-right: 1.6rem;
+      }
+      
+      .no-flexbox-gap .meal-attribute:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+      
+      .no-flexbox-gap .meal-icon {
+        margin-right: 1.6rem;
+      }
+      
+      .no-flexbox-gap .footer-row div:not(:last-child) {
+        margin-right: 6.4rem;
+      }
+      
+      .no-flexbox-gap .social-links li:not(:last-child) {
+        margin-right: 2.4rem;
+      }
+      
+      .no-flexbox-gap .footer-nav li:not(:last-child) {
+        margin-bottom: 2.4rem;
+      }
+      
+      @media (max-width: 75em) {
+        .no-flexbox-gap .main-nav-list li:not(:last-child) {
+          margin-right: 3.2rem;
+        }
+      }
+      
+      @media (max-width: 59em) {
+        .no-flexbox-gap .main-nav-list li:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 4.8rem;
+        }
+      }
+
+
+
+/* 
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+font wieght
+----07 WHITE SPACE
+     SPACING SYSTEM (px)
+     2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 
+     */
